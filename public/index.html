@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub Escola Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hub Escola Pro</h1>
+            <button id="btnSair" onclick="sair()" style="display:none;" class="btn-danger">Sair</button>
+        </header>
+
+        <div id="authSection" class="card">
+            <h2 id="authTitle">Login</h2>
+            <input type="text" id="login" placeholder="Usuário">
+            <input type="password" id="senha" placeholder="Senha">
+            <button id="btnAuth" onclick="processarAuth()">Entrar</button>
+            <p id="authMsg"></p>
+            <p class="toggle-text">
+                <span id="toggleText">Não tem conta?</span> 
+                <a href="#" id="toggleLink" onclick="alternarModoAuth()">Registre-se</a>
+            </p>
+        </div>
+
+        <div id="crudSection" class="card" style="display:none;">
+            <h2 id="crudTitle">Registrar Nova Instituição</h2>
+            <input type="hidden" id="escolaId">
+            <div class="form-group">
+                <input type="text" id="nomeEscola" placeholder="Nome da Instituição">
+                <input type="text" id="localEscola" placeholder="Localidade">
+                <div class="btn-group">
+                    <button id="btnSalvar" onclick="salvarEscola()">Registrar</button>
+                    <button id="btnCancelar" onclick="cancelarEdicao()" style="display:none;" class="btn-secondary">Cancelar</button>
+                </div>
+            </div>
+            
+            <h3>Escolas Cadastradas</h3>
+            <ul id="listaEscolas"></ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

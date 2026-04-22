@@ -1,0 +1,22 @@
+{
+  "name": "hub-escola-pro",
+  "version": "2.0.0",
+  "description": "Sistema de Gestão Escolar com Testes Completos",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test:unit": "jest tests/unit",
+    "test:api": "jest tests/api",
+    "test:e2e": "cypress open"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "cypress": "^13.0.0",
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
+  }
+}
